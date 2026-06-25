@@ -16,6 +16,7 @@ keywords = ["mcp", "mev", "defi", "web3", "ethereum", "polygon", "mempool"]
 dependencies = [
     "mcp>=1.0.0",
     "web3>=7.0.0",
+    "eth-abi>=5.0.0",
 ]
 
 [project.urls]
