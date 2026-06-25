@@ -26,5 +26,8 @@ Repository = "https://github.com/matiosera3-ops/mev-mcp"
 [project.scripts]
 mev-mcp = "mev_mcp.server:main"
 
-[tool.hatch.build.targets.wheel]
-packages = ["src/mev_mcp"]
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "/.env.example",
+    "/.gitignore",
+]
