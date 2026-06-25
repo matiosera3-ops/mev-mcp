@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mev-mcp"
+version = "0.1.0"
+description = "MCP server for MEV-relevant on-chain data: gas price percentiles and bounded mempool watching for pending swaps."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Ratsitohery Matthieu" }
+]
+keywords = ["mcp", "mev", "defi", "web3", "ethereum", "polygon", "mempool"]
+dependencies = [
+    "mcp>=1.0.0",
+    "web3>=7.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/matiosera3-ops/mev-mcp"
+Repository = "https://github.com/matiosera3-ops/mev-mcp"
+
+[project.scripts]
+mev-mcp = "mev_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mev_mcp"]
